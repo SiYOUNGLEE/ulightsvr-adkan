@@ -130,7 +130,7 @@
 	</dependencies>
 	<profiles>
 		<profile>
-			<id>was</id>
+			<id>tomcat</id>
 			<dependencies>
 				<dependency>
 					<groupId>org.springframework.boot</groupId>
@@ -141,11 +141,6 @@
 							<groupId>org.springframework.boot</groupId>
 						</exclusion>
 					</exclusions>
-				</dependency>
-				<dependency>
-					<groupId>javax.servlet</groupId>
-					<artifactId>jstl</artifactId>
-					<scope>provided</scope>
 				</dependency>
 			</dependencies>
 		</profile>
