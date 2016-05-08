@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC
+ "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="mybatis/generatorConfig.properties" />
+	<classPathEntry location="${jdbc.driver.location}" />
+
+    <context id="ADKAN" targetRuntime="MyBatis3" defaultModelType="flat">
+        <property name="suppressTypeWarnings" value="true" />
+
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+
+        <jdbcConnection driverClass="net.sourceforge.jtds.jdbc.Driver"
+            connectionURL="jdbc:jtds:sqlserver://192.168.100.93/CMSCTS" userId="cts" password="cts">
+        </jdbcConnection> 
+
+        <javaModelGenerator targetPackage="com.yjmedia.adkan.model.generator"
+            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.yjmedia.adkan.mapper.generator"
+            targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+            targetPackage="com.yjmedia.adkan.mapper.generator"
+            targetProject="src/main/java">
+            <!-- <property name="rootInterface" value="java.io.Serializable" /> -->
+            <!-- <property name="methodNameCalculator" value="EXTENDED" /> -->
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <table tableName="BUNRYU1_TBL" />
+    </context>
+</generatorConfiguration>
