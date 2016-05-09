@@ -6,8 +6,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="/webjarsjs"></script>
+<script data-main="/js/app" src="/webjars/requirejs/2.2.0/require.js"></script>
+
 <link href="<c:url value="css/app.css" />" rel="stylesheet"
 	type="text/css">
+<link rel='stylesheet' href='/webjars/bootstrap/css/bootstrap.min.css'>
+<!-- <script>
+	var require = {
+		baseUrl : '/js'
+	};
+</script>
+ -->
+
 <title>Spring Security Example</title>
 </head>
 <body class="security-app">
